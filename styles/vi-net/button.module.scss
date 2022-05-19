@@ -1,0 +1,24 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/variables';
+
+.btn {
+    display: inline-block;
+    padding: 14px 16px;
+	@extend .font-style-3;
+	font-weight: 700;
+    background-color: $secondary-color;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    &:hover {
+        background-color: #E2276E;
+    }
+    :global(.btn-text) {
+        display: inline-block;
+    }
+    :global(.material-icons) {
+        margin-left: 8px;
+        vertical-align: sub;
+    }
+}

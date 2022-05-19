@@ -1,0 +1,51 @@
+@import 'styles/vi-net/responsive';
+
+.swiper-slide {
+    width: 244px;
+}
+
+.swiper {
+    // width: 100%;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.process {
+    background: #061D27;
+    opacity: 0.1;
+    width: 100%;
+    height: 4px;
+    @include respond-above('lg') {
+        width: 4px;
+        height: 168px;
+        margin: 0px 32px;
+    }
+    &.0,&.1,&.2,&.3 {
+        background: linear-gradient(90deg, #FFC837 0.02%, #FF8008 124.95%);
+        opacity: 1;
+    }
+    &.0 {
+        border-radius: 4px 0px 0px 4px;
+        @include respond-above('lg') {
+            border-radius: 4px 4px 0px 0px;
+        }
+    }
+    &.last {
+        border-radius: 0px 4px 4px 0px;
+        @include respond-above('lg') {
+            border-radius: 0px 0px 4px 4px;
+        }
+    }
+    // &.3 {
+    //     border-radius: 0px 4px 4px 0px;
+    //     @include respond-above('lg') {
+    //         width: 4px;
+    //         height: 168px;
+    //         border-radius: 0px 0px 4px 4px;
+    //     }
+    // }
+}
+
+.fill-container {
+  flex: 1
+}

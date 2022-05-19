@@ -1,0 +1,10 @@
+@import 'styles/vi-net/responsive';
+
+.bg-img {
+    // background: url("../../../public/images/section0/bg-img.svg") no-repeat;
+    @include respond-above('lg') {
+        background: url("../../../public/images/Frame 34128.svg") no-repeat;
+        background-size: cover;
+    }
+    background-size: cover;
+}

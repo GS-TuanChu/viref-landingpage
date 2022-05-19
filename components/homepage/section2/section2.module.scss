@@ -1,0 +1,51 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/responsive';
+
+.section2 {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+    &.bg {
+        background: url("../../../public/images/section2/Frame2.svg") no-repeat;
+        @include respond-below('md') {
+            background: url("../../../public/images/section2/Frame2Mobi.svg") no-repeat;
+            background-size: cover;
+        }
+        background-size: cover;
+    }
+    // min-height: 2025px;
+    .box-sd {
+        box-shadow: 0px 4px 50px rgba(15, 15, 15, 0.08);
+    }
+
+    .card-action {
+        width: 284px;
+        height: auto;
+        left: 102px;
+        top: 3416px;
+        padding: 35px 24px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(15, 15, 15, 0.08);
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        margin-bottom: 10px;
+        @include respond-below('sm') {
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 4px 20px rgba(49, 43, 43, 0.08);
+            border-radius: 16px;
+            min-height: 376px;
+        }
+    }
+
+    .swiper {
+        width: 100%;
+      }
+      .swiper-slide {
+        width: 90%;
+      }
+}

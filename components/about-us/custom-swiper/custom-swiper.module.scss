@@ -1,0 +1,44 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/responsive';
+
+.ava-block {
+  position: relative;
+  @include respond-above('lg') {
+    img {
+      border-radius: 50%;
+    }
+  }
+  &:hover {
+    .dev-name {
+      opacity: 100;
+    }
+    transform: scale(1.2);
+    transition: all 0.4s;
+  }
+}
+.ava-linkedin {
+  width: 180px;
+  border-radius: 50%;
+}
+.icon-linkedin {
+  position: absolute;
+  width: 32px;
+  top: 5px;
+  right: 10px;
+  background-color: #ffffff;
+}
+.swiper-block {
+  position: relative;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  width: 12px;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  width: 12px;
+}

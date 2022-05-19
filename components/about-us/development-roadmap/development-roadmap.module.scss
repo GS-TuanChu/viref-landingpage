@@ -1,0 +1,34 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/responsive';
+
+.process-bar {
+  background-color: #c5c6c7;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.process-bar-active {
+  background: linear-gradient(90deg, #ffc837 0.02%, #ff8008 124.95%);
+  border-radius: 4px;
+  height: 4px;
+}
+
+.width-0 {
+  width: 25%;
+}
+
+.width-1 {
+  width: 50%;
+}
+
+.width-2 {
+  width: 75%;
+}
+
+.width-3 {
+  width: 100%;
+}
+
+.fill-container {
+  flex: 1
+}

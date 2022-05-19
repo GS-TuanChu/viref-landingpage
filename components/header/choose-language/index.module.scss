@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import 'styles/vi-net/responsive';
+
+.header {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 2px 4px 12px;
+    @include respond-below('lg') {
+        width: 66px;
+    }
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.lang-menu {
+    width: 100%;
+    text-align: right;
+    // font-weight: bold;
+    // margin-top: 25px;
+    position: relative;
+}
+.lang-menu .selected-lang {
+    display: flex;   
+    line-height: 2;
+    cursor: pointer;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    right: 0px;
+    width: 160px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    @include respond-below('lg') {
+        width: 55px;
+    }
+}
+
+
+.lang-menu ul li {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    text-decoration: none;
+    width: 100%;
+    padding: 7px 10px;
+    display: flex;
+}
+
+.lang-menu ul li:hover {
+    background-color: #f2f2f2;
+}
+
+// .lang-menu ul li a:before {
+//     content: '';
+//     display: inline-block;
+//     width: 30px;
+//     height: 25px;
+//     vertical-align: middle;
+//     margin-right: 10px;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+// .de:before {
+//     background-image: url('../../../public/images/vietnam-flag.png');
+// }
+
+// .en:before {
+//     background-image: url('../../../public/images/uk-flag.jpeg');
+// }

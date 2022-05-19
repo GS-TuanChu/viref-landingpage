@@ -1,0 +1,92 @@
+@import 'styles/vi-net/utils';
+
+
+.last-child-after {
+	content: '';
+	border-right: 1px solid #70707D;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: -1px;
+}
+
+.sku-item {
+	border-left: 1px solid #70707D;
+	border-right: 1px solid #70707D;
+	border-bottom: 1px solid #70707D;
+
+	@extend .font-style-3;
+	color: white;
+	&.sku-item-related {
+		&:first-child {
+			border-top: 1px solid #70707D;
+		}
+		
+	}
+}
+.md-sku-item {
+	width: calc((100%)/3);
+	border-left: 1px solid #70707D;
+	border-bottom: 1px solid #70707D;
+	position: relative;
+    left: -1px;
+
+	@extend .font-style-3;
+	color: white;
+	&:nth-child(3n+0), &:last-child {
+		position: relative;
+		&::after {
+			@extend .last-child-after;
+		}
+	}
+}
+
+.title {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $grey-color;
+	.preorder-text {
+		color: #FFE500;
+	}
+}
+.price-text {
+	@extend .font-style-3;
+	font-weight: 700;
+	&.price-text-ss {
+		color: $grey-color;
+		font-weight: 400;
+	}
+}
+.outstock-line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: 10;
+	pointer-events: none;
+	&::after {
+		content: "tạm hết";
+		position: absolute;
+		width: 165px;
+		height: 40px;
+		background-color: $grey-color;
+		@extend .font-style-2;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $primary-color;
+		padding: 8px;
+		text-align: center;
+		top: 24px;
+		left: -39px;
+		transform: rotate(315deg);
+	}
+}
+
+.truncate-text {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

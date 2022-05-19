@@ -1,0 +1,84 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/responsive';
+
+.input-custom {
+  position: relative;
+  // width: 498px;
+}
+
+.label-input {
+  position: absolute;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  background: #ffffff;
+  padding: 2px 8px;
+  // opacity: 0.8;
+  top: -15px;
+  left: 10px;
+}
+
+.input-text {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 13px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid rgba(6, 29, 39, 0.2);
+  height: 54px;
+ 
+}
+.input-text:focus{
+  outline: none;
+  background: 
+    linear-gradient(#fff 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(18.35deg, #B3E9FA 21%, #FDE9A3 88%) border-box;
+  border: 2pt solid transparent;
+  border-radius: 8px;
+}
+
+.select-custom {
+  color: #bbb8b8;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../../../public/images/drop-down.png');
+  background-position: calc(100% - 20px) calc(1em + 5px),
+    calc(100% - 20px) calc(1em + 5px), 100% 0;
+  background-size: 12px 8px;
+  background-repeat: no-repeat;
+}
+
+.input-text-area {
+  resize: none;
+  height: 223.33px;
+  @include respond-above('lg') {
+    height: 312px;
+  }
+}
+
+.btn {
+  padding: 16px 32px 15px;
+  border-radius: 68px;
+}
+
+.btn-signup {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  width: 136px;
+  height: 54px;
+  background: linear-gradient(2.05deg, #b3e9fa -0.32%, #fde9a3 120.46%);
+  @include respond-above('lg') {
+    width: 242px;
+    height: 68px;
+    font-size: 22px;
+  }
+}

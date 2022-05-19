@@ -1,0 +1,66 @@
+@import 'styles/vi-net/variables';
+@import 'styles/vi-net/mixin';
+
+.primary-color {
+    color: $primary-color;
+}
+.secondary-color {
+    color: $secondary-color;
+}
+.grey-color {
+    color: $grey-color;
+}
+
+.text-linear {
+    background: -webkit-linear-gradient(18.35deg, #B3E9FA 21%, #FDE9A3 88%);
+}
+.cl-linear2 {
+    background: $linear2;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cl-linear3 {
+    background: $linear3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.font-style-1 {
+    @include font-style(14px, 20px);
+}
+.font-style-2 {
+    @include font-style(16px, 24px);
+}
+.font-style-3 {
+    @include font-style(20px, 28px);
+}
+.font-style-14 {
+    @include font-style(14px, 140%);
+}
+.font-style-16 {
+    @include font-style(16px, 140%);
+}
+.font-style-18 {
+    @include font-style(18px, 150%);
+}
+.font-style-24 {
+    @include font-style(24px, 150%);
+}
+.font-style-28 {
+    @include font-style(28px, 96%);
+}
+.font-style-4 {
+    @include font-style(30px, 38px);
+}
+.font-style-5 {
+    @include font-style(48px, 71.76px);
+}
+.font-style-6 {
+    @include font-style(64px, 95.68px);
+}
+.font-style-7 {
+    @include font-style(24px, 32px);
+}
+.font-style-8 {
+    @include font-style(32px, 48px);
+}

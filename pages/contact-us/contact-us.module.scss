@@ -1,0 +1,19 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/responsive';
+
+.contact-us {
+  color: #061d27;
+  &.bg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: url('../../public/images/bgContactUs.svg') no-repeat;
+    @include respond-above('lg') {
+      background: url("../../public/images/ContactUsdesk.svg") no-repeat center;
+      background-size: cover;
+  }
+    background-size: cover;
+  }
+}

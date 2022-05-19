@@ -1,0 +1,22 @@
+<svg width="1440" height="860" viewBox="0 0 1440 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_368_956)">
+<rect width="1440" height="860" fill="#061D27"/>
+<g opacity="0.3" filter="url(#filter0_f_368_956)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M747.28 1192.46L1006 1640.8L1635.46 553.06L1116.93 553.688L1116.94 553.692L932.115 873.08L747.289 1192.47L747.28 1192.46Z" fill="url(#paint0_linear_368_956)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_368_956" x="395.28" y="201.06" width="1592.18" height="1791.74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="176" result="effect1_foregroundBlur_368_956"/>
+</filter>
+<linearGradient id="paint0_linear_368_956" x1="1675.55" y1="1176.75" x2="667.449" y2="1315.27" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B3E9FA"/>
+<stop offset="0.884176" stop-color="#FDE9A3"/>
+</linearGradient>
+<clipPath id="clip0_368_956">
+<rect width="1440" height="860" fill="white"/>
+</clipPath>
+</defs>
+</svg>

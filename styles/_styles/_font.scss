@@ -1,0 +1,92 @@
+.content-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @mixin text-upper {
+        position: relative;
+        z-index:1
+    }
+
+    .common-page {
+        width: 100%;
+        height: 100%;
+        padding: 85px 24px 26px 24px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-image {
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .start-image {
+        width: 54%;
+        position: absolute;
+        top: 14%;
+    }
+
+    // .start-text {
+    //     position: absolute;
+    //     bottom: 4%;
+    // }
+
+    .fw-600 {
+        font-weight: 600;
+    }
+
+    .fw-bold {
+        font-weight: bold;
+    }
+
+    .fs-48 {
+        @include text-upper;
+        font-size: 48px;
+        line-height: 140%;
+    }
+
+    .fs-32 {
+        @include text-upper;
+        font-size: 32px;
+    }
+
+    .fs-24 {
+        @include text-upper;
+        font-size: 24px;
+        line-height: 128%;
+    }
+
+    .fs-20 {
+        @include text-upper;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .fs-16 {
+        @include text-upper;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .fs-14 {
+        @include text-upper;
+        font-size: 14px;
+        line-height: 128%;
+    }
+
+    .mr-4 {
+        margin-right: 4px;
+    }
+
+    .mb-8 {
+        margin-bottom: 8px;
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "vi-net",
+  "version": "0.1.0",
+  "main": "function.js",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build-static": "next build && next export",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predeploy:qc": "rm -rf firebase.json  && cp firebase-np.json firebase.json && npm run build-static",
+    "predeploy": "rm -rf firebase.json  && cp firebase-np.json firebase.json && npm run build-static",
+    "deploy:qc": "firebase deploy --only hosting:$FIREBASE_HOSTING --project $FIREBASE_PROJECT --token $FIREBASE_TOKEN",
+    "deploy": "firebase deploy --only hosting:$FIREBASE_HOSTING --project $FIREBASE_PROJECT --token $FIREBASE_TOKEN"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "12.1.0",
+    "next-i18next": "^11.0.0",
+    "node-sass": "^6.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "swiper": "^8.0.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23"
+  }
+}

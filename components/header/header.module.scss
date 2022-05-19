@@ -1,0 +1,44 @@
+@import 'styles/vi-net/responsive';
+@import 'styles/vi-net/utils';
+
+.header {
+    transition: top 0.2s;
+    &.hidden-header {
+        top: -80px;
+        @include respond-above('lg') {
+            top: -100px;
+        }
+    }
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(80px);
+    border-bottom: 1px solid rgba(15, 15, 15, 0.1);
+    .nav {
+        @extend .font-style-18;
+        cursor: pointer;
+        color: #0F0F0F;
+        margin-left: 6%;
+        @include respond-below('lg') {
+            display: none;
+        }
+        li {
+            margin-right: 6%;
+        }
+    }
+    .box-language {
+        @include respond-below('lg') {
+            display: none;
+        }
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        select {
+            background: rgba(0, 0, 0, 0.00);
+            opacity: 0.7;
+        }
+        color: #061D27;
+        padding: 10px 13px;
+    }
+}
+.img-logo {
+    height: 48px;
+    width: 143.7px;
+}

@@ -1,0 +1,66 @@
+@import 'styles/vi-net/utils';
+@import 'styles/vi-net/responsive';
+
+.section1 {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+    &.bg {
+        background: url("../../../public/images/section1/Frame1.svg") no-repeat;
+        @include respond-below('lg') {
+            background: url("../../../public/images/section1/Frame1Mobi.svg") no-repeat;
+            background-size: cover;
+        }
+        background-size: cover;
+    }
+    // min-height: 1000px;
+
+    .title-size {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 140%;
+        text-transform: uppercase;
+    }
+    .sub-title {
+        color: #FFFFFF;
+        white-space: pre-line;
+    }
+    @include respond-below('lg') {
+        .sub-title {
+            font-size: 38px;
+            white-space: normal;
+        }
+        .mobi-pt-100{ 
+            padding-top: 100px;
+        }
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 32px 40px;
+        width: 392px;
+        min-height: 461px;
+        background: rgba(6, 20, 27, 0.5);
+        backdrop-filter: blur(30px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 24px;
+        transition: 0.3s;
+        overflow: auto;
+        .text-des {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    .card:hover {
+        transform: scale(1.1);
+        z-index: 10;
+        .text-des {
+            color: #FFFFFF;
+        }
+    }
+    @include respond-below('lg') {
+        .card {
+            margin-bottom: 24px;
+        }
+    }
+}

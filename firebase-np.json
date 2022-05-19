@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "out",
+    "site": "f4pro-228ee",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+

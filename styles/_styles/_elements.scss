@@ -1,0 +1,304 @@
+@import './colors';
+
+@mixin fontCommon($size, $lineHeigh, $color, $fontWeight: normal) {
+  font-size: $size;
+  line-height: $lineHeigh;
+  color: $color;
+  font-weight: $fontWeight;
+}
+
+.sticky-bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px 0px 8px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer {
+  z-index: 1001;
+}
+
+.wrapper-page {
+  background-color: $bg-start-page;
+  overflow: hidden;
+  padding: 44px 0px 75px;
+  background: #22313f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  > div:first-child {
+    flex: 1;
+    background-color: #22313F !important;
+    > div:nth-child(1) {
+      z-index: 1001 !important;
+    }
+    > div:nth-child(2) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.bg-page {
+  background-color: $bg-page;
+}
+
+.bg-footer {
+  background-color: $bg-page;
+}
+
+.wrapper_content {
+  padding: 15px 15px 20px 15px;
+}
+.banner_active {
+  background-image: url('../../public/images/Artboard.png');
+}
+.banner_inactive {
+  background-image: url('../../public/images/bn_newretail_groupbuy_header_yellow@3x.png');
+}
+// .banner_completed {
+//   background-image: url('../../public/images/bn_newretail_groupbuy_header_blue.png');
+// }
+.banner_expired, .banner_completed, .banner_cancelled, .banner_partially_completed {
+  background-image: url('../../public/images/bn_newretail_groupbuy_header_blue.png');
+}
+// .banner_cancelled {
+//   background-image: url('../../public/images/bn_newretail_groupbuy_header_blue.png');
+// }
+
+.banner-content {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.box-banner-msg {
+  border-radius: 8px;
+  order: 3;
+  font-size: 14px;
+  line-height: 20px;
+  color: #22313F;
+}
+
+
+.box-product {
+  background: #FFFFFF;
+  border: 1px solid #E6E7E9;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(1, 18, 34, 0.1);
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+
+.text-black-14 {
+  @include fontCommon(14px, 20px, $color-black);
+}
+
+.text-black-14-bold {
+  @include fontCommon(14px, 24px, $color-black, 600);
+}
+
+.text-white-16-32 {
+  @include fontCommon(16px, 32px, #ffffff);
+}
+
+.text-white-16 {
+  @include fontCommon(16px, 20px, #ffffff);
+}
+
+.text-black-16 {
+  @include fontCommon(16px, 20px, $color-black);
+}
+
+.text-black-16-500 {
+  @include fontCommon(16px, 20px, $color-black, 500);
+}
+
+.text-black-20 {
+  @include fontCommon(20px, 40px, $color-black);
+}
+
+.text-black-20-bold {
+  @include fontCommon(20px, 40px, $color-black, 700);
+}
+
+.text-white-14 {
+  @include fontCommon(14px, 20px, #ffffff);
+}
+
+.text-white-20 {
+  @include fontCommon(20px, 32px, #ffffff);
+}
+
+.text-white-20-bold {
+  @include fontCommon(20px, 32px, #ffffff, 700);
+}
+
+.text-white-24 {
+  @include fontCommon(24px, 32px, #ffffff);
+}
+
+.text-black-28 {
+  @include fontCommon(28px, 40px, $color-black);
+}
+
+.text-white-28-bold {
+  @include fontCommon(28px, 40px, #ffffff, 700);
+}
+
+.text-white-30 {
+  @include fontCommon(30px, 31px, #ffffff);
+}
+
+.text-black-32-bold {
+  @include fontCommon(32px, 40px, $color-black, 700);
+}
+
+.text-black-18 {
+  @include fontCommon(18px, 24px, $color-black);
+}
+
+.text-black-20 {
+  @include fontCommon(20px, 40px, $color-black);
+}
+
+.text-black-28-bold {
+  @include fontCommon(28px, 40px, $color-black, 700);
+}
+
+.text-yellow-14 {
+  @include fontCommon(14px, 15px, $color-yellow);
+}
+
+.text-yellow-14 {
+  @include fontCommon(16px, 24px, $color-yellow);
+}
+.text-yellow-20 {
+  @include fontCommon(20px, 24px, $color-yellow);
+}
+
+.text-yellow-32 {
+  @include fontCommon(32px, 34px, $color-yellow);
+}
+
+.text-yellow-40 {
+  @include fontCommon(40px, 42px, $color-yellow);
+}
+
+// red
+.text-red-20 {
+  @include fontCommon(20px, 28px, #DC2323);
+}
+
+// brown
+.text-brown-12 {
+  @include fontCommon(12px, 16px, #808890);
+}
+
+.text-brown-14 {
+  @include fontCommon(14px, 20px, rgba(1, 18, 34, 0.5));
+}
+
+
+.btn-common {
+  background: #ffffff;
+  border-radius: 8px;
+  color: rgba(66, 42, 33, 0.63);
+  padding: 14px 0px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #2f6bff;
+  border-radius: 8px;
+  color: white;
+  padding: 14px 0px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 100%;
+  font-weight: 500;
+}
+
+.btn-default {
+  background: white;
+  border-radius: 8px;
+  color: #2f6bff;
+  padding: 14px 0px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.btn-open-red {
+  width: 56px;
+  height: 32px;
+  background: #DC2323;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 32px;
+}
+
+// Button down app
+.wrap_f_bottom{
+  a {
+    text-decoration: none;
+  }
+  .btn_f{ 
+      background: #DC2323;
+      border-radius: 32px;
+      width: 220px;
+      height: 56px;
+      border: none;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+          display: flex;
+          align-items: center;
+          span {
+              img {
+                  width: 24px;
+                  height: 24px;
+                  margin-right: 10px;
+              }
+          }
+      }
+  }
+}
+
+@media only screen and (max-device-height: 667px) {
+  .wrapper-page {
+    padding: 0px;
+    > div:first-child > div:nth-child(1) {
+      margin-top: 10px;
+    }
+  }
+
+  .bg-footer {
+    height: 50px !important;
+    background: linear-gradient(
+      0deg,
+      rgba(34, 49, 63, 0.3) 0%,
+      rgba(34, 49, 63, 0.15) 51.56%,
+      rgba(34, 49, 63, 0) 100%
+    );
+  }
+}

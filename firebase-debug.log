@@ -1,0 +1,45 @@
+[debug] [2022-03-05T04:35:29.827Z] ----------------------------------------------------------------------
+[debug] [2022-03-05T04:35:29.829Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting: --project --token
+[debug] [2022-03-05T04:35:29.829Z] CLI Version:   10.0.1
+[debug] [2022-03-05T04:35:29.829Z] Platform:      linux
+[debug] [2022-03-05T04:35:29.829Z] Node Version:  v14.17.1
+[debug] [2022-03-05T04:35:29.829Z] Time:          Sat Mar 05 2022 11:35:29 GMT+0700 (Giờ Đông Dương)
+[debug] [2022-03-05T04:35:29.830Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-05T04:35:29.831Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-03-05T04:35:29.882Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-05T04:35:29.882Z] > authorizing via signed-in user (nguyenngoccod@gmail.com)
+[debug] [2022-03-05T04:35:29.882Z] [iam] checking project --token for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-03-05T04:35:29.883Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-03-05T04:35:29.883Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-05T04:35:30.035Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sat, 05 Mar 2022 04:35:30 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-05T04:35:30.052Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/--token:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-03-05T04:35:30.611Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-03-05T04:35:30.612Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-03-05T04:35:31.423Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 05 Mar 2022 04:35:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=961","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-05T04:35:31.426Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project --token:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-03-05T04:35:31.427Z] > refreshing access token with scopes: []
+[debug] [2022-03-05T04:35:31.428Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-05T04:35:31.593Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 05 Mar 2022 04:35:31 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-05T04:35:31.601Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/--token [none]
+[debug] [2022-03-05T04:35:37.469Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/--token 403
+[debug] [2022-03-05T04:35:37.469Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/--token {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-03-05T04:35:37.469Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-03-05T04:35:37.642Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:241:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:96:20)
+    at async Object.getFirebaseProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:290:21)
+    at async Object.getDefaultHostingSite (/usr/local/lib/node_modules/firebase-tools/lib/getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (/usr/local/lib/node_modules/firebase-tools/lib/requireHostingSite.js:9:18)
+    at async Object.fn (/usr/local/lib/node_modules/firebase-tools/lib/commands/deploy.js:73:9)
+    at async /usr/local/lib/node_modules/firebase-tools/lib/command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project --token. Please make sure the project exists and your account has permission to access it.
