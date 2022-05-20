@@ -7,25 +7,28 @@ import DownArrowImg from "public/images/drop-down.png";
 import { useOnClickOutside } from "hooks/hooks";
 import Image from "next/image";
 import { useRouter } from "next/router";
+// import { useTranslation } from "next-i18next";
 
 const style = moduleCss(styleCss);
 
 export default function ChooseLanguage() {
   const ref = useRef();
-  const [language, setLanguage] = useState({
-    name: "Tiếng Việt",
-    img: VietNamFlag,
-  });
+
   const [showUl, setShowUl] = useState(false);
+
   useOnClickOutside(ref, () => setShowUl(false));
+
   const router = useRouter();
+
+  // const { i18n } = useTranslation();
+
   const { locale } = useRouter();
-  const handleLocaleChange = (event, value) => {
-    event.preventDefault()
-    if (value === "en" || locale === "en") setLanguage({ name: "English", img: EnglishFlag });
-    if (value === "vi" || locale === "vi") setLanguage({ name: "Tiếng Việt", img: VietNamFlag });
+
+  const language = locale === "en" ? { name: "English", img: EnglishFlag } : { name: "Tiếng Việt", img: VietNamFlag };
+
+  const handleLocaleChange = (lan) => { 
     router.push(router.route, router.asPath, {
-      locale: value,
+      locale: lan,
     });
   };
 
@@ -49,7 +52,7 @@ export default function ChooseLanguage() {
               <li>
                 <a
                   className={style("de")}
-                  onClick={(_) => handleLocaleChange(event, "vi")}
+                  onClick={() => handleLocaleChange("vi")}
                 >
                   <Image src={VietNamFlag.src} width="30px" height="20px" />
                   <span className="hidden lg:inline ml-[6px]">Tiếng Việt</span>
@@ -58,7 +61,7 @@ export default function ChooseLanguage() {
               <li>
                 <a
                   className={style("en")}
-                  onClick={(_) => handleLocaleChange(event, "en")}
+                  onClick={() => handleLocaleChange("en")}
                 >
                   <Image src={EnglishFlag.src} width="30px" height="20px" />
                   <span className="hidden lg:inline ml-[6px]">English</span>
