@@ -15,10 +15,10 @@ import Search from 'public/images/section2/search 1.png';
 import LineHorizontal from 'public/images/section2/line-horizontal.svg';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "next-i18next";
 
 // Import Swiper styles
 import "swiper/css";
-
 
 const style = moduleCss(styleCss);
 
@@ -26,40 +26,34 @@ const DATA_CARD = [
     {
         id: '01',
         icon: Advertising,
-        title: 'Người Bán Tạo \n Chiến Dịch',
-        des: 'Người bán quy định tổng quỹ thưởng và số tiền trả thưởng cho mỗi đơn hàng'
     },
     {
         id: '02',
         icon: MoneyBag,
-        title: 'Khách Mua Hàng \n Nhận Hoàn Tiền',
-        des: 'Khách mua hàng chỉ cần quét mã QR để nhận hoàn tiền'
     },
     {
         id: '03',
         icon: Chat,
-        title: 'Giới Thiệu Thêm \n Khách Hàng Mới',
-        des: 'Người giới thiệu nhận tiền hoa hồng một cách tự động mỗi khi có đơn hàng mới'
     },
     {
         id: '04',
         icon: Search,
-        title: 'Tìm Và Bán Nhiều \n Sản Phẩm Khác',
-        des: 'Chọn bán sản phẩm mà mình tự tin nhất trong ViRef để tăng thu nhập'
     }
 ]
 
 function BaseCard(props) {
+    const { t } = useTranslation("homepage");
+    const { index, data } = props
     return (<div className={style('card-action') + 'mt-[24px]'}>
-        <span className={'text-[48px] font-semibold' + style('cl-linear2')}>{props?.data?.id}</span>
+        <span className={'text-[48px] font-semibold' + style('cl-linear2')}>{data?.id}</span>
         <div className='sm:w-[100px] w-[80px] h-[80px] sm:h-[100px] sm:my-[24px]'>
-            <Image src={props?.data?.icon} alt='item card' />
+            <Image src={data?.icon} alt='item card' />
         </div>
         <div className={'sm:text-[22px] text-[20px] font-semibold sm:whitespace-pre-line'}>
-            {props?.data?.title}
+            {t(`section2.works.${index}.title`)}
         </div>
         <div className={'sm:text-[18px] text-[16px] text-[#061D27] opacity-70 sm:mt-[16px] mt-[12px]'}>
-            {props?.data?.des}
+            {t(`section2.works.${index}.des`)}
         </div>
     </div>)
 }
@@ -76,7 +70,7 @@ function Card(props) {
                 {
                     DATA_CARD.map((item, index) => (
                         <SwiperSlide className={style('swiper-slide')} key={index}>
-                            <BaseCard data={item} />
+                            <BaseCard index={index} data={item} />
                         </SwiperSlide>
                     ))
                 }
@@ -85,18 +79,23 @@ function Card(props) {
     }
     return (
         DATA_CARD.map((item, index) => (
-            <BaseCard data={item} key={index} />
+            <BaseCard index={index} data={item} key={index} />
         ))
     )
 }
 
-
 export default function Section2() {
+    const { t, i18n } = useTranslation("homepage");
     return (
         <div className={'flex justify-center' + style('bg section2')}>
             <div className='w-full lg:max-w-[1440px] lg:w-[1440px] lg:px-[100px] px-[20px] pb-[150px]'>
                 <div className={'md:pt-[120px] pt-[100px] text-center md:text-[48px] text-[38px] text-[#061D27] font-semibold md:whitespace-normal whitespace-pre-line leading-[100%]'}>
-                    Hệ sinh thái {`\n`}<span className={style('cl-linear3')}>ViRef</span> App
+                    {i18n.language === "vi" ? <>
+                        {t('section2.eco1')} {'\n'} <span className={style('cl-linear3')}> {t('section2.eco2')} </span>
+                    </> : <>
+                        <span className={style('cl-linear3')}> {t('section2.eco1')} </span> {t('section2.eco2')} {'\n'}
+                    </>}
+                    {t('section2.eco3')}
                 </div>
 
                 <div className={'flex justify-center lg:mt-[52px] mt-[120px] relative'}>
@@ -106,25 +105,25 @@ export default function Section2() {
                                 <Image src={Item1} alt='giỏ hàng' />
                             </div>
                             <div className='font-bold lg:text-[22px] text-[16px] pt-[8px]'>
-                                Người Mua Hàng
+                                {t('section2.buyer.title')}
                             </div>
                             <div className='flex lg:mt-[24px] mt-[10px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Nhận được hoàn tiền</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.buyer.sub1')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Đảm bảo nguồn gốc</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.buyer.sub2')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Review sản phẩm</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.buyer.sub3')}</div>
                             </div>
                         </div>
                     </div>
@@ -135,25 +134,25 @@ export default function Section2() {
                                 <Image src={Item2} alt='giỏ hàng' />
                             </div>
                             <div className='font-bold lg:text-[22px] text-[16px] pt-[8px]'>
-                                Nhà Sản Xuất
+                                {t('section2.producer.title')}
                             </div>
                             <div className='flex lg:mt-[24px] mt-[10px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Tiết kiệm chi phí quảng cáo</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.producer.sub1')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Xây dựng mạng lưới bán hàng</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.producer.sub2')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Tạo lợi thế cạnh tranh</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.producer.sub3')}</div>
                             </div>
                         </div>
                     </div>
@@ -172,32 +171,36 @@ export default function Section2() {
                                 <Image src={Item3} alt='giỏ hàng' />
                             </div>
                             <div className='font-bold lg:text-[22px] text-[16px] pt-[8px]'>
-                                Người Giới Thiệu
+                                {t('section2.referrers.title')}
                             </div>
                             <div className='flex lg:mt-[24px] mt-[10px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Nhận hoa hồng giới thiệu</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.referrers.sub1')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Nhiều mặt hàng đa dạng</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.referrers.sub2')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
                                     <Image src={Checked} alt='checked' />
                                 </div>
-                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>Làm chủ mạng lưới bán hàng</div>
+                                <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.referrers.sub3')}</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className='text-[48px] font-semibold text-center lg:mt-[126px] mt-[226px]'>
-                    <span className={style('cl-linear3')}>ViRef</span> App hoạt động như thế nào?
+                    {
+                        i18n.language === "vi" ?
+                            <><span className={style('cl-linear3')}>ViRef</span> App hoạt động như thế nào?</> :
+                            <>How does <span className={style('cl-linear3')}>ViRef</span>  App work?</>
+                    }
                     <div>
                         <Image src={LineHorizontal} alt='line horizontal' />
                     </div>

@@ -6,18 +6,12 @@ import Logo from "public/images/logo-viref.png";
 import MenuItems from "public/images/menu-3 2.png";
 import { NavigationModal } from "./navigation-modal";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import ChooseLanguage from "./choose-language";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common", "section0"])),
-  },
-});
 
 const style = moduleCss(styleCss);
 let lastScrollTop = 0;
+
 export default function Header() {
   const [scrollTop, setScrollTop] = useState(0);
   const [isModal, setOpentModal] = useState(false);
@@ -35,7 +29,8 @@ export default function Header() {
   const handleClose = () => {
     setOpentModal(false);
   };
-  const { t } = useTranslation("section0");
+
+  const { t } = useTranslation('homepage');
 
   return (
     <>
@@ -58,10 +53,10 @@ export default function Header() {
         />
         <ul className={"flex justify-start grow" + style("nav")}>
           <li className={router.pathname == "/" ? "font-bold" : ""}>
-            <Link href="/">{t("home")}</Link>
+            <Link href="/">{t("section0.home")}</Link>
           </li>
           <li>
-            <Link href="https://exchange.viref.net">{t("transaction")}</Link>
+            <Link href="https://exchange.viref.net">{t("section0.transaction")}</Link>
           </li>
           {/*<li className={router.pathname == "/contact-us" ? "font-bold" : ""}>
                         <Link href="/contact-us">Liên Hệ</Link>
@@ -85,6 +80,7 @@ export default function Header() {
     </>
   );
 }
+
 // <li className={router.pathname == "/blogs" || router.pathname == "/blogs/acticle-detail" ? "font-bold" : ""}>
 //     <Link href="/blogs">Blogs</Link>
 // </li>

@@ -1,0 +1,44 @@
+{
+  "road": "Lộ trình phát triển",
+  "des-road": "Chúng tôi đang nỗ lực từng ngày để đưa đến cho cộng đồng một dự án blockchain thực chất.",
+  "roads": [
+    {
+      "title": "Khởi đầu",
+      "desc": "Xây dựng nền tảng ứng dụng",
+      "content": [
+        "Hoàn thiện bộ máy công ty",
+        "Xây dựng MVP ứng dụng",
+        "Dev và audit smart contract"
+      ]
+    },
+    {
+      "title": "Ra mắt",
+      "desc": "Giới thiệu ứng dụng ViRef",
+      "content": [
+        "Xây dựng app v2",
+        "Kêu gọi các nhà quảng cáo tham gia hình thức tiếp thị ViRef",
+        "Deploy smart contract, Private sale, Xây dựng sàn giao dịch"
+      ]
+    },
+    {
+      "title": "Tăng tốc",
+      "desc": "Triển khai crypto currency",
+      "content": [
+        "Hoàn thiện toàn bộ tính năng giao dịch blockchain trên app",
+        "Xây dựng hệ thống sàn giao dịch orderbook trên app",
+        "Tiếp tục phát triển các nhà quảng cáo tham gia ViRef"
+      ]
+    },
+    {
+      "title": "Cất cánh",
+      "desc": "Gia tăng nhiều giá trị cho cộng đồng",
+      "content": [
+        "Triển khai dự án NFT sử dụng đồng VREF để giao dịch",
+        "Xây dựng hệ sinh thái Defi xung quanh token VREF như bảo hiểm, thế chấp.."
+      ]
+    }
+  ],
+  "dev-team": "Đội ngũ phát triển",
+  "advisor": "Cố vấn Blockchain",
+  "sponsors": "Nhà tài trợ của chúng tôi"
+}

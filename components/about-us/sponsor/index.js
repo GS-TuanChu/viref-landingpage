@@ -4,8 +4,10 @@ import ImgFrame from '../../../public/images/gostream.png';
 import ImgAlertLab from '../../../public/images/Alert_Labs_Logo.png';
 import ImgRazorpay from '../../../public/images/razorpay-logo1.png';
 const style = moduleCss(styleSponsor);
+import { useTranslation } from "next-i18next";
 
 const Sponsor = () => {
+  const { t } = useTranslation("about-us");
   return (
     <div className={'w-full flex justify-center py-[80px] mt-[80px]'  +
     style('sponsor-block')}>
@@ -19,7 +21,7 @@ const Sponsor = () => {
           'text-center text-[22px] font-bold font-[Quicksand] leading-[140%] opacity-50'
         }
       >
-        Nhà tài trợ của chúng tôi
+        {t("sponsors")}
       </div>
       <div
         className={

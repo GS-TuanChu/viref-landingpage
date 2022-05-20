@@ -2,6 +2,7 @@ import { moduleCss } from 'helpers/functions';
 import ImgVector from '../../../public/images/Vector.png';
 import styleDevelopmentRoadmap from './development-roadmap.module.scss';
 import { useEffect, useState } from 'react';
+import { useTranslation } from "next-i18next";
 
 const style = moduleCss(styleDevelopmentRoadmap);
 
@@ -24,6 +25,7 @@ const SwiperItem = ({ index, setIndex, activeIndex }) => (
 
 const DevelopmentRoadmap = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation("about-us");
   return (
     <div className={'lg:px-[100px] lg:block hidden'}>
       <div
@@ -41,7 +43,7 @@ const DevelopmentRoadmap = () => {
           'lg:mt-[24px] lg:text-[48px] font-[Quicksand] font-semibold lg:leading-[110%] mt-[16px] text-[38px] px-[20px] text-center'
         }
       >
-        Lộ trình phát triển
+        {t("dev-roadmap")}
       </div>
       <div
         className={
@@ -55,11 +57,11 @@ const DevelopmentRoadmap = () => {
         <div className={style(`width-${(activeIndex)}`) + style('process-bar-active')}></div>
       </div>
       <div className={'flex w-full'}>
-      {
-            [1, 2, 3, 4].map((item, index) => (
-              <SwiperItem index={index} key={index} setIndex={event => setActiveIndex(event)} activeIndex={activeIndex} />
-            ))
-          }
+        {
+          [1, 2, 3, 4].map((item, index) => (
+            <SwiperItem index={index} key={index} setIndex={event => setActiveIndex(event)} activeIndex={activeIndex} />
+          ))
+        }
       </div>
     </div>
   );

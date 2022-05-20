@@ -7,13 +7,7 @@ import OneStopToImage from "public/images/section0/one-stop-to.png";
 import HandPhoneImage from "public/images/section0/hand-phone.png";
 import { NavigationModal } from "./join-modal";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common", "section0"])),
-  },
-});
 const style = moduleCss(styleCss);
 
 export default function Section0() {
@@ -37,7 +31,7 @@ export default function Section0() {
     setOpentModal(false);
   };
 
-  const { t } = useTranslation("section0");
+  const { t } = useTranslation("homepage");
 
   return (
     <>
@@ -54,10 +48,10 @@ export default function Section0() {
                 "pt-[100px] lg:pt-[50px] text-[#061D27]" + style("title")
               }
             >
-              <div>{t("solution")}</div>
+              <div>{t("section0.solution")}</div>
               <div className="flex">
                 <div className="mr-[5px] relative w-[170px] lg:w-[365px]">
-                  <span className="absolute z-10">{t("one-stop")}</span>
+                  <span className="absolute z-10">{t("section0.one-stop")}</span>
                   <div className={style("image-onestop") + "lg:hidden"}>
                     <Image src={OneStopImage} width="193px" height="45px" />
                   </div>
@@ -71,14 +65,14 @@ export default function Section0() {
               </div>
             </div>
             <div className="mt-[24px] font-style-16 lg:w-[391px] opacity-60">
-              {t("description")}
+              {t("section0.description")}
               <a
                 className={style("outside-link")}
                 href="/Gioi-thieu-ViRef.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {t("extra")}
+                {t("section0.extra")}
               </a>
             </div>
             <div
@@ -88,13 +82,13 @@ export default function Section0() {
               }
             >
               <span className="lg:hidden" onClick={handleDownload}>
-                Tham gia ngay
+              {t("section0.join")}
               </span>
               <span
                 className="lg:block hidden cursor-pointer"
                 onClick={handleDownload}
               >
-                {t("join")}
+                {t("section0.join")}
               </span>
             </div>
           </div>

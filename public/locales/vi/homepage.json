@@ -1,0 +1,98 @@
+{
+  "section0": {
+    "solution": "Giải pháp",
+    "one-stop": "One-stop",
+    "description": "Thay vì chỉ chia thưởng cho người giới thiệu trực tiếp như Affiliate truyền thống. Chúng tôi muốn chia quyền lợi cho cả khách mua hàng và những người giới thiệu trước đó. ",
+    "extra": "Đọc thêm",
+    "join": "Tham gia ngay",
+    "home": "Trang chủ",
+    "transaction": "Giao dịch"
+  },
+  "section1": {
+    "title": "HIỆN ĐẠI - HIỆU QUẢ - TIẾT KIỆM",
+    "description": " - Cộng đồng mà bất cứ ai cũng có thể làm kinh tế, tăng thêm doanh số và thu nhập",
+    "cards": [
+      {
+        "title": "Tiết kiệm chi phí quảng cáo, tiếp thị",
+        "des": "Thay vì trả tiền quảng cáo cho Google, Facebook mà không đảm bảo có đơn. Với ViRef người bán chỉ phải trả chi phí thưởng cho mỗi đơn hàng đã thành công."
+      },
+      {
+        "title": "Tạo ra môi trường cạnh tranh lành mạnh, hiệu quả",
+        "des": "ViRef ưu tiên các sản phẩm/dịch vụ mang lại nhiều giá trị cho người mua/người tiêu dùng. Người giới thiệu được quyền chọn sản phẩm chất lượng tốt nhất để bán."
+      },
+      {
+        "title": "Áp dụng Blockchain - Token hóa hệ sinh thái",
+        "des": "Với việc ứng Blockchain, việc nhận thưởng bằng token sẽ mang nhiều giá trị gia tăng cho tất cả các bên tham gia theo thời gian."
+      }
+    ]
+  },
+  "section2": {
+    "eco1": "Hệ sinh thái",
+    "eco2": "ViRef",
+    "eco3": "App",
+    "buyer": {
+      "title": "Người Mua Hàng",
+      "sub1": "Nhận được hoàn tiền",
+      "sub2": "Đảm bảo nguồn gốc",
+      "sub3": "Review sản phẩm"
+    },
+    "producer": {
+      "title": "Nhà Sản Xuất",
+      "sub1": "Tiết kiệm chi phí quảng cáo",
+      "sub2": "Xây dựng mạng lưới bán hàng",
+      "sub3": "Tạo lợi thế cạnh tranh"
+    },
+    "referrers": {
+      "title": "Người Giới Thiệu",
+      "sub1": "Nhận hoa hồng giới thiệu",
+      "sub2": "Nhiều mặt hàng đa dạng",
+      "sub3": "Làm chủ mạng lưới bán hàng"
+    },
+    "works": [
+      {
+        "title": "Người Bán Tạo \n Chiến Dịch",
+        "des": "Người bán quy định tổng quỹ thưởng và số tiền trả thưởng cho mỗi đơn hàng"
+      },
+      {
+        "title": "Khách Mua Hàng \n Nhận Hoàn Tiền",
+        "des": "Khách mua hàng chỉ cần quét mã QR để nhận hoàn tiền"
+      },
+      {
+        "title": "Giới Thiệu Thêm \n Khách Hàng Mới",
+        "des": "Người giới thiệu nhận tiền hoa hồng một cách tự động mỗi khi có đơn hàng mới"
+      },
+      {
+        "title": "Tìm Và Bán Nhiều \n Sản Phẩm Khác",
+        "des": "Chọn bán sản phẩm mà mình tự tin nhất trong ViRef để tăng thu nhập"
+      }
+    ]
+  },
+  "section3": {
+    "title": "Về Tokenomics",
+    "card1": {
+      "title": "Cơ chế phát hành token độc đáo",
+      "des": "Cách phát hành VREF là sự kết hợp của 2 mô hình ICO và IDO, giúp giữ lại ưu điểm nhưng đồng thời hạn chế các khuyết điểm."
+    },
+    "card2": {
+      "title": "Cơ chế chống \"cá voi\" hút-xả",
+      "des": "Hạn chế được các nhà đầu tư lớn đẩy giá tăng cao rồi bán tháo, tổn hại đến nhà đầu tư nhỏ và giá trị của dự án"
+    },
+    "card3": {
+      "title": "Đảm bảo quyền lợi cho nhà đầu tư",
+      "des": "Những nhà đầu tư nhỏ được chúng tôi chú ý bảo đảm quyền lợi hơn các dự án Blockchain khác trên thị trường"
+    },
+    "card4": {
+      "title": "Tự động và minh bạch",
+      "des": "Smart contract nắm giữ và phân phối token, toàn bộ đều được công khai minh bạch trên mạng lưới Blockchain"
+    },
+    "about": "Về",
+    "description": "ViRef phát hành token riêng trên hệ thống Blockchain, đặt tên là VREF. Người dùng của ViRef khi sử dụng ứng dụng để nhận hoàn tiền (cash back) hay nhận hoa hồng giới thiệu, họ có thể lựa chọn lấy tiền mặt hoặc lấy token VREF.",
+    "details": [
+      "Thuận tiện thanh toán",
+      "Thanh khoản cao",
+      "Giá trị tăng theo thời gian",
+      "Kích thích tiêu dùng"
+    ],
+    "learnmore": "Tìm hiểu thêm"
+  }
+}

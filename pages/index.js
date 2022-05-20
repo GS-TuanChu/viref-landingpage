@@ -5,25 +5,22 @@ import AboutUs from './about-us';
 
 import Blogs from './blogs';
 import HomePage from 'components/homepage'
-//import {useTranslation} from 'hooks/useTranslation';
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
- export async function getStaticProps({ locale }) {
-   return {
-     props: {
-       ...(await serverSideTranslations(locale, ['section0'])),
-     }
-   }
- }
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['homepage', 'about-us', 'contact-us'])),
+    }
+  }
+}
 
 export default function Home() {
-
-  const {t} = useTranslation();
-
   return (
     <>
       <Head>
-        <title>ViRef - One-Stop Affiliate Solution</title>
+        <title>ViRef - One-Stop Affiliate Solution</title>s
         <meta name="description" content="Hệ thống bán hàng hiệu quả thông qua phương thức truyền miệng thời đại số" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,9 +29,9 @@ export default function Home() {
       </Head>
 
       <Layout mainComp={
-       <HomePage />
+        <HomePage />
       } />
-        {/* <Blogs /> */}
+      {/* <Blogs /> */}
     </>
   )
 }

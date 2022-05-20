@@ -1,0 +1,46 @@
+{
+  "road": "Development roadmap",
+  "des-road": "We are working hard every day to bring a genuine blockchain project to the community.",
+  "roads": [
+    {
+      "title": "Start",
+      "desc": "Build an application platform",
+      "content": [
+        "Completing the company apparatus",
+        "Build MVP App.",
+        " Dev and audit smart contract"
+      ]
+    },
+    {
+      "title": "Launch",
+      "desc": "Giới thiệu ứng dụng ViRef",
+      "content": [
+        "Build v2 app.",
+        "Calling for affiliates to join ViRef marketing.",
+        "Deploy smart contract, Private sale, Building a cryptocurrency exchange"
+      ]
+    },
+    {
+      "title": "Acceleration",
+      "desc": "Introducing ViRef application",
+      "content": [
+        "Cryptocurrency Deployment",
+        "Completing all blockchain transaction features on the app",
+        "Building an orderbook trading platform on the app",
+        "Continuing to attract affiliates to join ViRef"
+      ]
+    },
+    {
+      "title": "Take off",
+      "desc": "Gia tăng nhiều giá trị cho cộng đồng",
+      "content": [
+        "Adding value to the community",
+        "Deploy NFT project using VREF tokens for transactions",
+        "Build a Defi ecosystem around VREF tokens such as insurance, mortgage.."
+      ]
+    }
+  ],
+  "dev-team": "Development team",
+  "advisor": "Blockchain Advisor",
+  "sponsors": "Our Sponsors"
+}

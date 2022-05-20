@@ -1,0 +1,99 @@
+{
+  "section0": {
+    "solution": "One-stop",
+    "one-stop": "Solutions",
+    "description": "Not only direct affiliates earn a commission like traditional Affiliate, but we would also like to offer benefits for both customers and previous referers. ",
+    "extra": "Read more",
+    "join": "Join Now",
+    "home": "Home",
+    "transaction": "Transaction"
+  },
+  "section1": {
+    "title": "MODERN - EFFICIENT - ECONOMICAL",
+    "description": " - A community where anyone can do\n business, increase sales and income",
+    "cards": [
+      {
+        "title": "Saving advertising and marketing costs",
+        "des": "Instead of paying ads to Google, Facebook without a guarantee of improving sales, the businesses only pay a commission when a sale is made through a given affiliate\\’s link with ViRef."
+      },
+      {
+        "title": "Creating a healthy, effective and competitive environment",
+        "des": "ViRef prioritizes products/services that bring genuine value to buyers/consumers. The affiliate has the right to choose the best quality product to refer to the customers."
+      },
+      {
+        "title": "Applying Blockchain - Ecosystem Tokenization",
+        "des": "With the application of Blockchain, earning commissions in tokens will bring about much added value to all participants over time."
+      }
+    ]
+  },
+  "section2": {
+    "eco1": "ViRef",
+    "eco2": "App",
+    "eco3": "Ecosystem",
+    "buyer": {
+      "title": "The Buyer",
+      "sub1": "Refund policy",
+      "sub2": "Guaranteed origin of products",
+      "sub3": "Product Reviews"
+    },
+    "producer": {
+      "title": "The Producer",
+      "sub1": "Reducing marketing expenses",
+      "sub2": "Building a sales network",
+      "sub3": "Gaining a competitive advantage"
+    },
+    "referrers": {
+      "title": "Referrers",
+      "sub1": "Referral commissions",
+      "sub2": "Wide variety of products ",
+      "sub3": "The ability to run your own affiliate network"
+    },
+    "works": [
+      {
+        "title": "The Seller Creates \n Marketing Campaign",
+        "des": "The seller stipulates the total commissions and the payout amount for each complete sale."
+      },
+      {
+        "title": "The Customer Receives Refunds",
+        "des": "The customer only needs to scan the QR code to receive the refund."
+      },
+      {
+        "title": "Introducing More \n New Customers",
+        "des": "Referrers receive automatically commission every time there is a new order."
+      },
+      {
+        "title": "Finding And Selling \n More Products",
+        "des": "Choose to sell the products you are most confident in in ViRef to increase your income."
+      }
+    ]
+  },
+  "section3": {
+    "title": "About Tokenomics",
+    "card1": {
+      "title": "Unique token issuance mechanism",
+      "des": "The issuance method of VREF is a combination of ICO and IDO models, which helps to make use of the advantages but limit the disadvantages at the same time."
+    },
+    "card2": {
+      "title": "Mechanism that avoids \"whales\" pump-dump",
+      "des": "This mechanism can somewhat stop huge investors from market manipulation, a.k.a. pumping prices up and then dumping quickly, harming retail investors and the value of the project"
+    },
+    "card3": {
+      "title": "Guarantee benefits for investors",
+      "des": "The retail investors are paid more attention by us to ensure their returns compared to other Blockchain projects on the market."
+    },
+    "card4": {
+      "title": "Automatic and transparent",
+      "des": "Smart contract holds and distributes tokens, all of which are public and transparent on the Blockchain network."
+    },
+    "about": "About",
+    "description": "ViRef issues its own tokens on the Blockchain system, named VREF. When using the application to receive cash back or receive referral commission, users of ViRef can choose to get cash or get VREF tokens.",
+    "details": [
+      "Convenient payment",
+      "High liquidity",
+      "Value increases over time",
+      "Stimulate consumption"
+    ],
+    "learnmore": "Learn more"
+  }
+}
+

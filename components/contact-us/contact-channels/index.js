@@ -4,6 +4,7 @@ import ImgPhone from '../../../public/images/phone-call1.png';
 import ImgTelegram from '../../../public/images/telegram1.png';
 import ImgMailBox from '../../../public/images/mail-box1.png';
 import Image from 'next/image';
+import { useTranslation } from "next-i18next";
 
 const style = moduleCss(styleContactChannels);
 
@@ -14,7 +15,7 @@ const DATA_CONTACT = [
     link: 'tel:1900277255',
     des: 'Hotline',
     color: false,
-    mr:'lg:mr-[32px]'
+    mr: 'lg:mr-[32px]'
   },
   {
     icon: ImgTelegram,
@@ -24,7 +25,7 @@ const DATA_CONTACT = [
     link2: 'https://t.me/+e8w0hTxFdkg5MDQ9',
     des: 'Telegram',
     color: true,
-    mr:'lg:mr-[32px]'
+    mr: 'lg:mr-[32px]'
   },
   {
     icon: ImgMailBox,
@@ -32,11 +33,12 @@ const DATA_CONTACT = [
     link: 'email:hi@viref.net',
     des: 'Email',
     color: false,
-    mr:'lg:mr-[0px]'
+    mr: 'lg:mr-[0px]'
   },
 ];
 
 export const Contact = ({ data }) => {
+
   return (
     <div
       className={
@@ -48,29 +50,29 @@ export const Contact = ({ data }) => {
         <Image src={data.icon} layout="responsive" />
       </div>
       <a href={data.link}>
-      <div
-        className={
-          data.title2
-            ? style('text-box-contact color-link')
-            : style('text-box-contact') + 'mt-[20px]'
-        }
-      >
-        {data.title}
-      </div>
+        <div
+          className={
+            data.title2
+              ? style('text-box-contact color-link')
+              : style('text-box-contact') + 'mt-[20px]'
+          }
+        >
+          {data.title}
+        </div>
       </a>
-      
+
       <a href={data.link2}>
-      <div
-        className={
-          data.title2
-            ? style('text-box-contact color-link')
-            : style('text-box-contact') + `mt-[8px] ${!data.title2 && 'hidden'}`
-        }
-      >
-        {data.title2}
-      </div>
+        <div
+          className={
+            data.title2
+              ? style('text-box-contact color-link')
+              : style('text-box-contact') + `mt-[8px] ${!data.title2 && 'hidden'}`
+          }
+        >
+          {data.title2}
+        </div>
       </a>
-     
+
       <div
         className={'lg:opacity-[70] mt-[8px]' + style('sub-text-box-contact')}
       >
@@ -81,6 +83,7 @@ export const Contact = ({ data }) => {
 };
 
 const ContactChannel = () => {
+  const { t } = useTranslation("contact-us");
   return (
     <>
       <div
@@ -88,11 +91,11 @@ const ContactChannel = () => {
           'lg:text-[80px] lg:font-semibold lg:leading-[96%] font-[Quicksand] text-[38px] text-center my-[48px]'
         }
       >
-        Liên hệ với
+        {t("contact")}
         <span className={'ml-[5px]' + style('cl-linear3')}>ViRef</span>
       </div>
       <div className='lg:block lg:text-[22px] lg:mt-[32px] lg:leading-[150%] lg:opacity-70 text-[#061D27] text-center hidden'>
-        Hãy liên lạc và cho chúng tôi biết cách chúng tôi có thể giúp
+        {t("help")}
       </div>
       <div className='lg:flex lg:justify-between lg:mt-[80px] lg:w-full '>
         {DATA_CONTACT.map((contact, index) => (

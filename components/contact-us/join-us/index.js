@@ -4,9 +4,11 @@ import ImgIPhone from 'public/images/Group13.png';
 import ImgGooglePlay from 'public/images/google-play.png';
 import ImgAppStore from 'public/images/app-store.png';
 import Link from 'next/link';
+import { useTranslation } from "next-i18next";
 
 const style = moduleCss(styleJoinUs);
 export default function JoinUs() {
+  const { t } = useTranslation("contact-us");
   return (
     <div
       className={
@@ -20,7 +22,7 @@ export default function JoinUs() {
             'lg:w-[400px] lg:text-left lg:text-[40px] font-semibold lg:mt-0 mt-[48px] font-[Quicksand] leading-[96%] text-center text-[38px]'
           }
         >
-          Tham gia cùng
+          {t("join")}
           <span className={'ml-[5px]' + style('cl-linear3')}>ViRef</span>
         </div>
         <div
@@ -28,14 +30,14 @@ export default function JoinUs() {
             'lg:w-[500px] lg:text-left lg:mx-0 lg:text-[18px] lg:leading-[150%] lg:opacity-70 mt-[24px] mx-[20px] text-[16px] opacity-80 leading-[140%] text-center'
           }
         >
-          ViRef là ứng dụng giúp bạn nhận hoàn tiền khi mua hàng, đồng thời tặng thưởng cho công sức giới thiệu nếu bạn tạo ra đơn hàng mới.
+          {t("footer")}
         </div>
         <div className='lg:flex lg:mt-[33px] hidden'>
           <a href="https://play.google.com/store/apps/details?id=godream.vn.vinet">
-          <img className={'w-[175px] mr-[32px]'} src={ImgGooglePlay.src} />
+            <img className={'w-[175px] mr-[32px]'} src={ImgGooglePlay.src} />
           </a>
           <a href="https://apps.apple.com/vn/app/viref/id1604803348">
-          <img className={'w-[175px]'} src={ImgAppStore.src} />
+            <img className={'w-[175px]'} src={ImgAppStore.src} />
           </a>
         </div>
       </div>

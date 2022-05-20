@@ -6,35 +6,25 @@ import Item1 from "../../../public/images/section1/discover1.png";
 import Item2 from "../../../public/images/section1/contribute.png";
 import Item3 from "../../../public/images/section1/earn.png";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common", "section1"])),
-  },
-});
 
 const style = moduleCss(styleCss);
 
+
 const DATA_CARD = [
   {
-    icon: Item1,
-    title: "Tiết kiệm chi phí quảng cáo, tiếp thị",
-    des: "Thay vì trả tiền quảng cáo cho Google, Facebook mà không đảm bảo có đơn. Với ViRef người bán chỉ phải trả chi phí thưởng cho mỗi đơn hàng đã thành công.",
+    icon: Item1
   },
   {
-    icon: Item2,
-    title: "Tạo ra môi trường cạnh tranh lành mạnh, hiệu quả",
-    des: "ViRef ưu tiên các sản phẩm/dịch vụ mang lại nhiều giá trị cho người mua/người tiêu dùng. Người giới thiệu được quyền chọn sản phẩm chất lượng tốt nhất để bán.",
+    icon: Item2
   },
   {
-    icon: Item3,
-    title: "Áp dụng Blockchain - Token hóa hệ sinh thái",
-    des: "Với việc ứng Blockchain, việc nhận thưởng bằng token sẽ mang nhiều giá trị gia tăng cho tất cả các bên tham gia theo thời gian.",
+    icon: Item3
   },
 ];
 
-export const Card = ({ data }) => {
+export const Card = ({ data, index }) => {
+  const { t } = useTranslation("homepage");
+
   return (
     <div className={style("card") + "mt-[24px]"}>
       <div className={"flex flex-col text-center"}>
@@ -44,12 +34,12 @@ export const Card = ({ data }) => {
           </div>
         </div>
         <div className={"text-[#FFFFFF] text-[22px] font-bold pt-[24px]"}>
-          {data.title}
+          {t(`section1.cards.${index}.title`)}
         </div>
         <div
           className={"md:text-[18px] text-[16px] pt-[12px]" + style("text-des")}
         >
-          {data.des}
+          {t(`section1.cards.${index}.des`)}
         </div>
       </div>
     </div>
@@ -57,12 +47,12 @@ export const Card = ({ data }) => {
 };
 
 export default function Section1() {
-  const { t } = useTranslation("section1");
+  const { t } = useTranslation("homepage");
   return (
     <div className={"w-full flex justify-center" + style("bg section1")}>
       <div className="w-full lg:max-w-[1440px] lg:w-[1440px] lg:px-[100px] lg:pt-[120px] lg:pb-[174px] px-[20px] py-[24px]">
         <div className={style("mobi-pt-100")}>
-          <span className={style("cl-linear2 title-size")}>{t("title")}</span>
+          <span className={style("cl-linear2 title-size")}>{t("section1.title")}</span>
         </div>
         <div className={"pt-[32px]"}>
           <div
@@ -70,22 +60,13 @@ export default function Section1() {
               "font-semibold text-[48px] leading-[110%]" + style("sub-title")
             }
           >
-            <span className={style("cl-linear2")}>ViRef</span> - Cộng đồng mà{" "}
-            {`\n`}
-            bất cứ ai cũng có thể làm kinh tế, {`\n`}
-            tăng thêm doanh số và thu nhập.
-          </div>
-          <div
-            className={
-              "font-semibold text-[48px] leading-[110%]" + style("sub-title")
-            }
-          >
-            {t("description")}
+            <span className={style("cl-linear2")}>ViRef</span> 
+             {t('section1.description')}
           </div>
         </div>
         <div className="flex flex-wrap lg:justify-between justify-around md:pt-[76px] pt-[48px]">
           {DATA_CARD.map((item, index) => (
-            <Card data={item} key={index} />
+            <Card data={item} index={index} key={index} />
           ))}
         </div>
       </div>

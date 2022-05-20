@@ -16,8 +16,7 @@ import HoanNT from "public/images/hoannt.jpeg";
 import HaoDN from "public/images/haodn.jpg";
 import BaoPQ from "public/images/baopq.jpeg";
 import ImgAva1 from "public/images/Rectangle148.png";
-
-
+import { useTranslation } from "next-i18next";
 
 const style = moduleCss(styleCss);
 const DATA_DEVELOPER = [
@@ -80,6 +79,7 @@ const DATA_DEVELOPER = [
     },
   ];
 const Section5 = () => {
+  const { t } = useTranslation("about-us");
     return (
         <div className={"w-full" + style("bg-img")}>
         <div className="lg:max-w-[1440px] m-auto">
@@ -92,7 +92,7 @@ const Section5 = () => {
             "lg:text-[48px] lg:leading-[110%] mt-[80px] text-[38px] px-[20px] text-center font-semibold font-[Quicksand]"
           }
         >
-          Cố vấn Blockchain
+          {t("advisor")}
         </div>
         <div
           className={

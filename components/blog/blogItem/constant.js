@@ -6,6 +6,7 @@ import Rectangle85 from "public/images/Rectangle85.jpg";
 import Rectangle86 from "public/images/Rectangle86.jpg";
 import Rectangle87 from "public/images/Rectangle87.jpg";
 import Rectangle88 from "public/images/Rectangle88.jpg";
+
 export const items = [
     {
         tag: 'hot',
