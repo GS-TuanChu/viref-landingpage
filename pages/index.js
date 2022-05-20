@@ -5,22 +5,21 @@ import AboutUs from './about-us';
 
 import Blogs from './blogs';
 import HomePage from 'components/homepage'
-import {useTranslation} from 'hooks/useTranslation';
-//import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-/*
- *import { useTranslation } from 'next-i18next'
- * export async function getStaticProps({ locale }) {
- *   return {
- *     props: {
- *     }
- *   }
- * }
- */
+//import {useTranslation} from 'hooks/useTranslation';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+ export async function getStaticProps({ locale }) {
+   return {
+     props: {
+       ...(await serverSideTranslations(locale, ['section0'])),
+     }
+   }
+ }
 
 export default function Home() {
 
-  const t = useTranslation();
-  console.log(t.hello)
+  const {t} = useTranslation();
+
   return (
     <>
       <Head>
