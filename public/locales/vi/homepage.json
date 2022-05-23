@@ -2,11 +2,16 @@
   "section0": {
     "solution": "Giải pháp",
     "one-stop": "One-stop",
+    "affiliate": "Affiliate",
     "description": "Thay vì chỉ chia thưởng cho người giới thiệu trực tiếp như Affiliate truyền thống. Chúng tôi muốn chia quyền lợi cho cả khách mua hàng và những người giới thiệu trước đó. ",
     "extra": "Đọc thêm",
     "join": "Tham gia ngay",
     "home": "Trang chủ",
-    "transaction": "Giao dịch"
+    "transaction": "Giao dịch",
+    "modal": {
+      "scan": "Quét QR để tải ứng dụng tiện dụng hơn",
+      "download": "Tải ứng dụng "
+    }
   },
   "section1": {
     "title": "HIỆN ĐẠI - HIỆU QUẢ - TIẾT KIỆM",
@@ -94,5 +99,10 @@
       "Kích thích tiêu dùng"
     ],
     "learnmore": "Tìm hiểu thêm"
+  },
+  "footer": {
+    "social-network": "Mạng Xã Hội",
+    "contact": "Liên Hệ",
+    "description": "Mua sắm nhận hoàn tiền. Giới thiệu cũng được thưởng."
   }
 }

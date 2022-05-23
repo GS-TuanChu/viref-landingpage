@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import QrCodeImg from 'public/images/section0/qr-code.png';
 import PhoneImge from 'public/images/section0/Group 13.png';
+import { useTranslation } from 'next-i18next';
 
 const style = moduleCss(styleCss);
 const NavigationModal = ({ handleClose }) => {
@@ -25,7 +26,7 @@ const NavigationModal = ({ handleClose }) => {
         // clean up
         return () => window.removeEventListener("click", handleClick);
     }, []);
-
+    const { t } = useTranslation("homepage")
     return (
         <>
             <div className={`share-modal-wrapper`}>
@@ -44,10 +45,10 @@ const NavigationModal = ({ handleClose }) => {
                     <div className="flex px-[60px] justify-between">
                         <div className="flex flex-col items-center">
                             <div className="text-[40px] font-semibold leading-[110%] mb-[32px]">
-                                Tải ứng dụng <span className="cl-linear3">ViRef</span>
+                                {t("section0.modal.download")}<span className="cl-linear3">ViRef</span>
                             </div>
                             <Image src={QrCodeImg} width="212px" height="212" />
-                            <div className="mt-[32px] mb-[50px] font-style-18 opacity-70">Quét QR để tải ứng dụng tiện dụng hơn</div>
+                            <div className="mt-[32px] mb-[50px] font-style-18 opacity-70">  {t("section0.modal.scan")}</div>
                         </div>
                         <Image src={PhoneImge} width="282px" height="365px" />
                     </div>

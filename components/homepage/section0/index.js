@@ -61,7 +61,7 @@ export default function Section0() {
                     <Image src={OneStopToImage} width="403px" height="82px" />
                   </div>
                 </div>
-                <div>Affiliate</div>
+                <div>{t("section0.affiliate")}</div>
               </div>
             </div>
             <div className="mt-[24px] font-style-16 lg:w-[391px] opacity-60">

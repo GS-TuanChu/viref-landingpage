@@ -1,12 +1,17 @@
 {
   "section0": {
     "solution": "One-stop",
-    "one-stop": "Solutions",
+    "one-stop": "Affiliate",
+    "affiliate": "Solution",
     "description": "Not only direct affiliates earn a commission like traditional Affiliate, but we would also like to offer benefits for both customers and previous referers. ",
     "extra": "Read more",
     "join": "Join Now",
     "home": "Home",
-    "transaction": "Transaction"
+    "transaction": "Transaction",
+    "modal": {
+      "scan": "Scan QR to download ViRef",
+      "download": "Download "
+    }
   },
   "section1": {
     "title": "MODERN - EFFICIENT - ECONOMICAL",
@@ -94,6 +99,11 @@
       "Stimulate consumption"
     ],
     "learnmore": "Learn more"
+  },
+  "footer": {
+    "social-network": "Social Networks",
+    "contact": "Contact",
+    "description": "Earn cashback on purchases and on referrals."
   }
 }
 

@@ -13,7 +13,7 @@
     },
     {
       "title": "Launch",
-      "desc": "Giới thiệu ứng dụng ViRef",
+      "desc": "Introducing ViRef application",
       "content": [
         "Build v2 app.",
         "Calling for affiliates to join ViRef marketing.",
@@ -32,9 +32,8 @@
     },
     {
       "title": "Take off",
-      "desc": "Gia tăng nhiều giá trị cho cộng đồng",
+      "desc": "Adding value to the community",
       "content": [
-        "Adding value to the community",
         "Deploy NFT project using VREF tokens for transactions",
         "Build a Defi ecosystem around VREF tokens such as insurance, mortgage.."
       ]
