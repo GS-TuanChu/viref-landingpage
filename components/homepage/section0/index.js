@@ -51,7 +51,7 @@ export default function Section0() {
               <div>{t("section0.solution")}</div>
               <div className="flex">
                 <div className="mr-[5px] relative w-[170px] lg:w-[365px]">
-                  <span className="absolute z-10">{t("section0.one-stop")}</span>
+                  <span className={`absolute z-10 ${t("section0.one-stop") === "Affiliate" ? style("left") : ''}`}>{t("section0.one-stop")}</span>
                   <div className={style("image-onestop") + "lg:hidden"}>
                     <Image src={OneStopImage} width="193px" height="45px" />
                   </div>

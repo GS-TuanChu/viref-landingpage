@@ -109,19 +109,19 @@ export default function Section2() {
                             </div>
                             <div className='flex lg:mt-[24px] mt-[10px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic" />
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.buyer.sub1')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic"/>
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.buyer.sub2')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic"/>
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.buyer.sub3')}</div>
                             </div>
@@ -138,19 +138,19 @@ export default function Section2() {
                             </div>
                             <div className='flex lg:mt-[24px] mt-[10px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic"/>
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.producer.sub1')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic"/>
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.producer.sub2')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic"/>
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.producer.sub3')}</div>
                             </div>
@@ -175,19 +175,19 @@ export default function Section2() {
                             </div>
                             <div className='flex lg:mt-[24px] mt-[10px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic"/>
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.referrers.sub1')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic" />
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.referrers.sub2')}</div>
                             </div>
                             <div className='flex lg:mt-[12px] mt-[8px]'>
                                 <div className='lg:mr-[16px] mr-[8px] lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]'>
-                                    <Image src={Checked} alt='checked' />
+                                    <Image src={Checked} alt='checked' layout="intrinsic" />
                                 </div>
                                 <div className='lg:text-[18px] text-[14px] text-[#061D27] opacity-80'>{t('section2.referrers.sub3')}</div>
                             </div>

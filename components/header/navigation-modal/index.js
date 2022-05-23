@@ -6,6 +6,7 @@ import { moduleCss } from 'helpers/functions';
 import styleCss from './index.module.scss';
 import Link from 'next/link';
 import ChooseLanguage from '../choose-language';
+import { useTranslation } from 'next-i18next';
 
 const style = moduleCss(styleCss);
 const NavigationModal = ({ handleClose }) => {
@@ -23,7 +24,7 @@ const NavigationModal = ({ handleClose }) => {
     //     // clean up
     //     return () => window.removeEventListener("click", handleClick);
     // }, []);
-
+    const { t } = useTranslation("homepage")
     return (
         <>
             <div className={`share-modal-wrapper`}>
@@ -45,7 +46,7 @@ const NavigationModal = ({ handleClose }) => {
                     <div className="container-share mt-[32px] font-style-24">
                         <ul className={style('nav')}>
                         <li>
-                            <Link href="/"><b>Trang Chủ</b></Link>
+                            <Link href="/"><b>{t(`section0.home`)}</b></Link>
                         </li>
                         {/*<li>
                             <Link href="/blogs">Blogs</Link>
@@ -57,7 +58,7 @@ const NavigationModal = ({ handleClose }) => {
                             <Link href="/about-us">Về Chúng Tôi</Link>
                         </li>*/}
                         <li>
-                            <Link href="https://exchange.viref.net/" target="_blank" rel="noopener noreferrer">Giao dịch</Link>
+                            <Link href="https://exchange.viref.net/" target="_blank" rel="noopener noreferrer">{t("section0.transaction")}</Link>
                         </li>
                         <li>
                             <a href="https://whitepaper.viref.net/" target="_blank" rel="noopener noreferrer">Whitepaper</a>
@@ -65,12 +66,12 @@ const NavigationModal = ({ handleClose }) => {
                         </ul>
                     </div>
                     <div className="footer m-t-24 h-[113px]">
-                        <div className={style('social-text')}>Theo dõi các kênh xã hội của ViRef:</div>
+                        <div className={style('social-text')}>{t("footer.follow")}</div>
                         <ul className="flex mt-[20px]">
-                            <li className="mr-[24px]"><BsFacebook size="24px" fontWeight="bold" /></li>
-                            <li className="mr-[24px]"><BsTwitter size="24px" fontWeight="bold" /></li>
+                            <li className="mr-[24px]"> <a href="https://www.facebook.com/ViRef.Net"><BsFacebook size="24px" fontWeight="bold" /></a></li>
+                            {/* <li className="mr-[24px]"><BsTwitter size="24px" fontWeight="bold" /></li>
                             <li className="mr-[24px]"><BsInstagram size="24px" fontWeight="bold" /></li>
-                            <li><BsLinkedin size="24px" fontWeight="bold" /></li>
+                            <li><BsLinkedin size="24px" fontWeight="bold" /></li> */}
                         </ul>
                     </div>
                 </div>

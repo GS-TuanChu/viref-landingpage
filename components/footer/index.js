@@ -62,7 +62,7 @@ export default function Footer() {
                     <li className="mr-[24px]">
                         <a href="https://www.facebook.com/ViRef.Net"><BsFacebook size="24px" fontWeight="bold" /></a>
                     </li>
-                    {/*<li className="mr-[24px]">
+                    {/* <li className="mr-[24px]">
                         <a href="#"><BsTwitter size="24px" fontWeight="bold" /></a>
                     </li>
                     <li className="mr-[24px]">
@@ -70,7 +70,7 @@ export default function Footer() {
                     </li>
                     <li>
                         <a href="#"><BsLinkedin size="24px" fontWeight="bold" /></a>
-                    </li>*/}
+                    </li> */}
                 </ul>
             </div>
         </div>

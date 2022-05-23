@@ -82,11 +82,11 @@ const DevelopRoadmap = ({ data }) => {
         <div className="mt-[64px] lg:w-[8%]"></div>
         <Swiper
           slidesPerView={"auto"}
-          className={style("swiper") + 'lg:hsidden'}
+          className={style("swiper") + 'lg:hidden'}
           onSlideChange={(event) => setActiveIndex(event.activeIndex)}
         >
           {
-            [1, 2, 3, 4].map((_, index) => (
+            [1, 2, 3, 4].map((item, index) => (
               <SwiperSlide className={style("swiper-slide")} key={index}>
                 <SwiperItem index={index} key={index} setIndex={event => event} activeIndex={activeIndex} data={index} />
               </SwiperSlide>
